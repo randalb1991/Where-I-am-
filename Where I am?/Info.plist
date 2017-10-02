@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Necesitamos acceder a tu lozalización. Prometemos no dejarte sin bateria :P</string>
 </dict>
 </plist>

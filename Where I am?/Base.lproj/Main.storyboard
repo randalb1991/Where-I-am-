@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,109 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Where_I_am_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9sV-sE-a4H">
+                                <rect key="frame" x="34" y="395" width="304" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localización" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fI-WT-aID">
+                                <rect key="frame" x="56" y="35" width="263.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="ND5-9n-ANa">
+                                <rect key="frame" x="44.5" y="110" width="287" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitud:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZJ-qM-kFW">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-8Y-e4p">
+                                        <rect key="frame" x="152.5" y="0.0" width="134.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="J9m-RP-jVP">
+                                <rect key="frame" x="44" y="155" width="287" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitud:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tod-JC-v8Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FG5-Y4-OUP">
+                                        <rect key="frame" x="152.5" y="0.0" width="134.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUY-qr-KzN">
+                                <rect key="frame" x="97.5" y="220" width="180" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000000000000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLj-zx-vb5">
+                                <rect key="frame" x="110" y="300" width="155" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9v-Fd-q1U">
+                                <rect key="frame" x="131" y="617" width="113" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Localízame"/>
+                                <connections>
+                                    <action selector="localizameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sn1-5t-ytE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Main"/>
+                        <constraints>
+                            <constraint firstItem="YLj-zx-vb5" firstAttribute="top" secondItem="bUY-qr-KzN" secondAttribute="bottom" constant="20" id="3ds-0a-57g"/>
+                            <constraint firstItem="YLj-zx-vb5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5BO-NL-lZe"/>
+                            <constraint firstItem="bUY-qr-KzN" firstAttribute="top" secondItem="J9m-RP-jVP" secondAttribute="bottom" constant="35" id="6Jp-L3-jfF"/>
+                            <constraint firstItem="ND5-9n-ANa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="84I-2u-qaR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j9v-Fd-q1U" secondAttribute="bottom" constant="10" id="HKJ-Kb-pFr"/>
+                            <constraint firstItem="ND5-9n-ANa" firstAttribute="top" secondItem="0fI-WT-aID" secondAttribute="bottom" constant="15" id="MYV-lb-Jk7"/>
+                            <constraint firstItem="j9v-Fd-q1U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W2D-dp-Fcp"/>
+                            <constraint firstItem="0fI-WT-aID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WWa-TL-VuF"/>
+                            <constraint firstItem="0fI-WT-aID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="ZHa-nr-9rN"/>
+                            <constraint firstItem="J9m-RP-jVP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ozP-AK-AW2"/>
+                            <constraint firstItem="bUY-qr-KzN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sH1-Qb-btL"/>
+                            <constraint firstItem="J9m-RP-jVP" firstAttribute="top" secondItem="ND5-9n-ANa" secondAttribute="bottom" constant="15" id="v5b-CX-0ye"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="headingLabel" destination="YLj-zx-vb5" id="1MW-G2-qK1"/>
+                        <outlet property="latitudLabel" destination="j6a-8Y-e4p" id="LCr-GX-8O5"/>
+                        <outlet property="localizameButton" destination="j9v-Fd-q1U" id="JSR-m6-zsE"/>
+                        <outlet property="longitudLabel" destination="FG5-Y4-OUP" id="aA6-Pu-f9w"/>
+                        <outlet property="mapView" destination="9sV-sE-a4H" id="rhG-Wt-gCH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Main">
+            <color red="0.5" green="0.70300000905990601" blue="0.72200000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
