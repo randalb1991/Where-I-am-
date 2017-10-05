@@ -86,6 +86,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate/*va a responde
         
         if let data = try? Data(contentsOf: urlString){
             sitesJSON = JSON(data)
+            print(sitesJSON)
             //Heading es la direccion en la que el usuario esta mirando.
             locationManager.startUpdatingHeading()
             
@@ -106,6 +107,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate/*va a responde
             self.userHeading = newHeading.magneticHeading //Obtiene el norte magnetico.
             self.locationManager.stopUpdatingHeading()
             //self.*/
+            //self.createsites()
         }
     }
     

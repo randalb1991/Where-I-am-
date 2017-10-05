@@ -59,7 +59,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="where i am" width="256" height="256"/>
+        <image name="where i am" width="512" height="512"/>
         <namedColor name="Main">
             <color red="0.5" green="0.70300000905990601" blue="0.72200000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
